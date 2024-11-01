@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <h1>Todo List App</h1>
+        </header>
+        
+        <main>
+            <!-- Project List Section -->
+            <section id="project-section">
+                <h2>Projects</h2>
+                <div id="project-container"></div>
+                <button id="add-project-btn">Add Project</button>
+            </section>
+            
+            <!-- Todo List Section -->
+            <section id="todo-section">
+                <h2>Todos</h2>
+                <div id="todo-container"></div>
+                <button id="add-todo-btn">Add Todo</button>
+            </section>
+        </main>
+        
+        <!-- Modal for adding projects or todos -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="modal-title">Add Item</h2>
+                <label for="modal-input">Name:</label>
+                <input type="text" id="modal-input" placeholder="Enter name" />
+
+                <label for="modal-description">Description:</label>
+                <textarea id="modal-description" placeholder="Enter description"></textarea>
+
+                <label for="modal-due-date">Due Date:</label>
+                <input type="date" id="modal-due-date" />
+
+                <label for="modal-priority">Priority:</label>
+                <select id="modal-priority">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <button id="modal-save">Save</button>
+                <button id="modal-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
